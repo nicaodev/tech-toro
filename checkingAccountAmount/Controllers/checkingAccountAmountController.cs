@@ -16,7 +16,7 @@ public class checkingAccountAmountController : ControllerBase
         _checkingAccountAmountService = checkingAccountAmountService;
     }
     /// <summary>
-    /// Retorna saldo, investimentos e patrimônio total "mockados" como exemplos.
+    /// Retorna saldo, investimentos e patrimônio total "mockados" para exemplo.
     /// </summary>
     /// <returns></returns>
     [HttpGet]
