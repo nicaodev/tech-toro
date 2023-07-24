@@ -1,5 +1,4 @@
 ﻿using checkingAccountAmount.Application.Interfaces;
-using checkingAccountAmount.Application.Services;
 using checkingAccountAmount.Domain.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,17 +14,18 @@ public class checkingAccountAmountController : ControllerBase
     {
         _checkingAccountAmountService = checkingAccountAmountService;
     }
+
     /// <summary>
     /// Retorna saldo, investimentos e patrimônio total "mockados" para exemplo.
     /// </summary>
     /// <returns></returns>
-    [HttpGet]
+    [HttpGet(template:"userPosition")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UserPosition))]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<UserPosition>> UserPosition()
     {
         var retorno = await _checkingAccountAmountService.GetUserPosition();
 
-        if (retorno is null) return NotFound("Não há Registros.");
-
-        return Ok(retorno);
+        return retorno is null ? NotFound("Registros não encontrados.") : Ok(retorno);
     }
 }
