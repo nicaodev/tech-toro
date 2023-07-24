@@ -4,6 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\checkingAccountAmount.Application\checkingAccountAmount.Application.csproj" />
+    <ProjectReference Include="..\checkingAccountAmount.Infra.IoC\checkingAccountAmount.Infra.IoC.csproj" />
   </ItemGroup>
 
 </Project>
