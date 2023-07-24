@@ -10,7 +10,7 @@ public class CheckingAccountAmountService : ICheckingAccountAmountService
 
     public CheckingAccountAmountService(ICheckingAccountAmountRepository repo)
     {
-        _repo = repo;
+        _repo = repo ?? throw new ArgumentNullException(nameof(_repo));
     }
 
     public async Task<UserPosition> GetUserPosition()
