@@ -1,0 +1,43 @@
+/* Estilos da barra superior */
+.top-bar {
+  background-color: #330066;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.top-bar h1 {
+  margin: 0;
+}
+
+/* Estilos da div que contém as informações do usuário */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.user-position-card {
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-position-card h2 {
+  margin-bottom: 10px;
+}
+
+.user-position-card ul {
+  padding-left: 20px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+}

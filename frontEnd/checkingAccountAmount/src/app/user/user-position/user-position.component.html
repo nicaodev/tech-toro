@@ -1,8 +1,9 @@
-<div *ngIf="loading; else dataContent">
-  Loading...
+<div class="top-bar">
+  <h1>Toro Investimentos</h1>
 </div>
-<ng-template #dataContent>
-  <div *ngIf="userPosition">
+
+<div class="container">
+  <div class="user-position-card" *ngIf="userPosition; else loadingContent">
     <h2>Saldo em Conta Corrente: R$ {{ userPosition.checkingAccountAmount }}</h2>
     <h2>Patrimônio Consolidado: R$ {{ userPosition.consolidated }}</h2>
     <h2>Ativos:</h2>
@@ -11,8 +12,23 @@
         {{ asset.symbol }} - {{ asset.amount }} ações - Valor individual: R$ {{ asset.currentPrice }}
       </li>
     </ul>
+
+    <ngx-charts-bar-vertical
+      [view]="[400, 300]"
+      [results]="chartData"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+    >
+    </ngx-charts-bar-vertical>
   </div>
-  <div *ngIf="!userPosition">
-    Data not available
-  </div>
-</ng-template>
+  <ng-template #loadingContent>
+    <div class="loading-container">
+      Loading...
+    </div>
+  </ng-template>
+</div>

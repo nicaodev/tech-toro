@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserPositionService } from '../../services/user-position.service';
+import { UserPositionService }  from '../../services/user-position.service';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-user-position',
@@ -7,8 +8,18 @@ import { UserPositionService } from '../../services/user-position.service';
   styleUrls: ['./user-position.component.css']
 })
 export class UserPositionComponent implements OnInit {
-  userPosition: any; // You can create an interface for this too, matching the returned JSON structure
+  userPosition: any;
   loading: boolean = true;
+
+  showXAxis = true;
+  showYAxis = true;
+  showLegend = false;
+  showXAxisLabel = true;
+  showYAxisLabel = true;
+  xAxisLabel = 'Ativo';
+  yAxisLabel = 'Quantidade';
+
+  chartData: any[]=[];
 
   constructor(private userPositionService: UserPositionService) { }
 
@@ -16,12 +27,22 @@ export class UserPositionComponent implements OnInit {
     this.userPositionService.getUserPosition().subscribe(
       (data) => {
         this.userPosition = data;
+        this.prepareChartData();
         this.loading = false;
       },
       (error) => {
-        console.error('Error fetching user position:', error);
+        console.error('Erro:', error);
         this.loading = false;
       }
     );
+  }
+
+  prepareChartData(): void {
+    this.chartData = this.userPosition.positions.map((asset:any) => {
+      return {
+        name: asset.symbol,
+        value: asset.amount
+      };
+    });
   }
 }

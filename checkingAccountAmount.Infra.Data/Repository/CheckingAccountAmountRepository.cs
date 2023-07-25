@@ -9,11 +9,12 @@ public class CheckingAccountAmountRepository : ICheckingAccountAmountRepository
     {
         return new UserPosition
         {
-            CheckingAccountAmount = 234.00m,
+            CheckingAccountAmount = 2034.00m,
             Positions = new List<Assets>
             {
-                new Assets { Symbol = "PETR4", Amount = 2, CurrentPrice = 28.44m },
-                new Assets { Symbol = "EGIE3", Amount = 3, CurrentPrice = 40.77m }
+                new Assets { Symbol = "PETR4", Amount = 10, CurrentPrice = 28.44m },
+                new Assets { Symbol = "EGIE3", Amount = 30, CurrentPrice = 40.77m },
+                new Assets { Symbol = "ITSA4", Amount = 20, CurrentPrice = 10m },
             }
         };
     }
