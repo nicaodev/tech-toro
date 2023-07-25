@@ -10,26 +10,26 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "checkingAccountAmount.API",
 		{EF006066-43D8-4481-B7C8-2B653547D1E3} = {EF006066-43D8-4481-B7C8-2B653547D1E3}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkingAccountAmount.Application", "checkingAccountAmount.Application\checkingAccountAmount.Application.csproj", "{EF006066-43D8-4481-B7C8-2B653547D1E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "checkingAccountAmount.Application", "checkingAccountAmount.Application\checkingAccountAmount.Application.csproj", "{EF006066-43D8-4481-B7C8-2B653547D1E3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{813F050C-C9F9-41E2-B2B4-F318B19224FC} = {813F050C-C9F9-41E2-B2B4-F318B19224FC}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkingAccountAmount.Domain", "checkingAccountAmount.Domain\checkingAccountAmount.Domain.csproj", "{813F050C-C9F9-41E2-B2B4-F318B19224FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "checkingAccountAmount.Domain", "checkingAccountAmount.Domain\checkingAccountAmount.Domain.csproj", "{813F050C-C9F9-41E2-B2B4-F318B19224FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkingAccountAmount.Infra.Data", "checkingAccountAmount.Infra.Data\checkingAccountAmount.Infra.Data.csproj", "{140378C1-0A2F-4B3F-A8D0-EBE28BCB2F68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "checkingAccountAmount.Infra.Data", "checkingAccountAmount.Infra.Data\checkingAccountAmount.Infra.Data.csproj", "{140378C1-0A2F-4B3F-A8D0-EBE28BCB2F68}"
 	ProjectSection(ProjectDependencies) = postProject
 		{813F050C-C9F9-41E2-B2B4-F318B19224FC} = {813F050C-C9F9-41E2-B2B4-F318B19224FC}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkingAccountAmount.Infra.IoC", "checkingAccountAmount.Infra.IoC\checkingAccountAmount.Infra.IoC.csproj", "{22FB7B1B-2FC6-4884-AC84-6244E6C68847}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "checkingAccountAmount.Infra.IoC", "checkingAccountAmount.Infra.IoC\checkingAccountAmount.Infra.IoC.csproj", "{22FB7B1B-2FC6-4884-AC84-6244E6C68847}"
 	ProjectSection(ProjectDependencies) = postProject
 		{140378C1-0A2F-4B3F-A8D0-EBE28BCB2F68} = {140378C1-0A2F-4B3F-A8D0-EBE28BCB2F68}
 		{813F050C-C9F9-41E2-B2B4-F318B19224FC} = {813F050C-C9F9-41E2-B2B4-F318B19224FC}
 		{EF006066-43D8-4481-B7C8-2B653547D1E3} = {EF006066-43D8-4481-B7C8-2B653547D1E3}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkingAccountAmount.Tests", "checkingAccountAmount.Tests\checkingAccountAmount.Tests.csproj", "{05099BA0-1455-4919-A6C9-D04152D24256}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkingAccountAmount.XUnit", "checkingAccountAmount.XUnit\checkingAccountAmount.XUnit.csproj", "{574EFE5B-8392-492A-924C-314CD3F498F0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{140378C1-0A2F-4B3F-A8D0-EBE28BCB2F68} = {140378C1-0A2F-4B3F-A8D0-EBE28BCB2F68}
 		{58728868-EFE6-44D1-8527-8D8807513419} = {58728868-EFE6-44D1-8527-8D8807513419}
@@ -63,10 +63,10 @@ Global
 		{22FB7B1B-2FC6-4884-AC84-6244E6C68847}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22FB7B1B-2FC6-4884-AC84-6244E6C68847}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22FB7B1B-2FC6-4884-AC84-6244E6C68847}.Release|Any CPU.Build.0 = Release|Any CPU
-		{05099BA0-1455-4919-A6C9-D04152D24256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05099BA0-1455-4919-A6C9-D04152D24256}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05099BA0-1455-4919-A6C9-D04152D24256}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05099BA0-1455-4919-A6C9-D04152D24256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{574EFE5B-8392-492A-924C-314CD3F498F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{574EFE5B-8392-492A-924C-314CD3F498F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{574EFE5B-8392-492A-924C-314CD3F498F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{574EFE5B-8392-492A-924C-314CD3F498F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
