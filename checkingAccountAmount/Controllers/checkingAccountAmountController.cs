@@ -27,6 +27,7 @@ public class checkingAccountAmountController : ControllerBase
     {
         var retorno = await _checkingAccountAmountService.GetUserPosition();
 
-        return retorno is null ? NotFound("Registros não encontrados.") : Ok(retorno);
+        //return retorno is null ? NotFound("Registros não encontrados.") : Ok(retorno);
+        return retorno;
     }
 }
