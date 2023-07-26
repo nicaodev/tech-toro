@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  checkingaccountamount.api:
+    image: ${DOCKER_REGISTRY-}checkingaccountamountapi
+    build:
+      context: .
+      dockerfile: checkingAccountAmount/Dockerfile
