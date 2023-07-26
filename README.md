@@ -12,8 +12,7 @@
 
 
 ## Pré-Requisitos
-- SQL Server
-- .Net 6
+- .Net 7
 
 ## Docker Compose
 - Caso queira usar o [Docker](https://www.docker.com/products/docker-desktop/)
